@@ -61,15 +61,15 @@ public class UIFragment extends Fragment {
                 }
         });
 
-        deleteItem.setOnClickListener(view ->  {
-                String what = input.getText().toString().trim();
-                input.setBackgroundColor(Color.parseColor("#FFFFFF"));
-                input.onEditorAction(EditorInfo.IME_ACTION_DONE); //to close the keyboard when done with the text
-                if(what.length() > 0) {
-                itemsDB.removeItem(what);
-                newWhat.setText("");
-            }
-        });
+//        deleteItem.setOnClickListener(view ->  {
+//                String what = input.getText().toString().trim();
+//                input.setBackgroundColor(Color.parseColor("#FFFFFF"));
+//                input.onEditorAction(EditorInfo.IME_ACTION_DONE); //to close the keyboard when done with the text
+//                if(what.length() > 0) {
+//                itemsDB.removeItem(what);
+//                newWhat.setText("");
+//            }
+//        });
 
         return v;
     }

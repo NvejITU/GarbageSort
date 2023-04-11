@@ -22,11 +22,11 @@ public class ItemsViewModel extends ViewModel {
         items.setValue(temp);
     }
 
-    public void removeItem(String what){
-        ItemsDB temp= items.getValue();
-        temp.removeItem(what);
-        items.setValue(temp);
-    }
+//    public void removeItem(String what){
+//        ItemsDB temp= items.getValue();
+//        temp.removeItem(what);
+//        items.setValue(temp);
+//    }
     public List<Item> getList() {  return items.getValue().getList();  }
 
     public int size() { return items.getValue().size(); }

@@ -64,7 +64,7 @@ public class ListFragment extends Fragment {
         @Override
         public void onClick(View view) {
             String what= (String)((TextView)view.findViewById(R.id.item_what)).getText();
-            itemsDB.removeItem(what);
+        //    itemsDB.removeItem(what);
         }
     }
 
