@@ -32,7 +32,7 @@ public class ListFragment extends Fragment {
         itemList.setAdapter(mAdapter);
         itemsDB.getValue().observe(getActivity(),itemsDB -> mAdapter.notifyDataSetChanged());
 
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+        /*        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
             Button backButton = v.findViewById(R.id.back_button);
             backButton.setOnClickListener(view ->
                     getActivity()
@@ -40,6 +40,7 @@ public class ListFragment extends Fragment {
                             .beginTransaction()
                             .replace(R.id.back_button ,new UIFragment()).commit());
         }
+        */
 
         return v;
     }

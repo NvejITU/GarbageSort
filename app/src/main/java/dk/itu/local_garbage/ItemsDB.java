@@ -21,7 +21,7 @@ public class ItemsDB extends ViewModel {
     // private static ItemsDB sItemsDB;
     private final ArrayList<Item> itemsDB= new ArrayList<>();
 
-    public void initialize(Context context){
+    public static void initialize(Context context){
         if (mDatabase == null){
             mDatabase = new DBCreate(context.getApplicationContext()).getWritableDatabase();
         }
@@ -57,7 +57,9 @@ public class ItemsDB extends ViewModel {
   //  }
 
     public void addItem(String what, String place){
-        itemsDB.add(new Item(what, place));
+        Item newItem= new Item(what, place);
+        ContentValues values= getContentValues(newItem);
+        mDatabase.insert(ItemsDbSchema.ItemTable.NAME, null, values);
     }
 
   //  public String searchForPlace(String item){

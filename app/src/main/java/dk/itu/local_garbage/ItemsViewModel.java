@@ -14,6 +14,10 @@ public class ItemsViewModel extends ViewModel {
         items.setValue(new ItemsDB());
     }
 
+    public void initialize(Context context){
+        items.getValue().initialize(context);
+    }
+
     public MutableLiveData<ItemsDB> getValue() { return items; }
 
     public void addItem(String what, String place){
