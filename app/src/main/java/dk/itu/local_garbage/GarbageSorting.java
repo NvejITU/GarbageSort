@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 public class GarbageSorting extends AppCompatActivity {
@@ -21,18 +22,27 @@ public class GarbageSorting extends AppCompatActivity {
     }
 
     private void setUpFragments() {
-
-        FragmentManager fm = getSupportFragmentManager();
-        Fragment fragmentUI = fm.findFragmentById(R.id.container_ui);
-        Fragment fragmentList = fm.findFragmentById(R.id.container_list);
-
-        if (fragmentUI == null && fragmentList == null) {
-            fragmentUI = new UIFragment();
-            fragmentList = new ListFragment();
-            fm.beginTransaction()
-                    .add(R.id.container_ui, fragmentUI)
-                    .add(R.id.container_list, fragmentList)
-                    .commit();
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            fragmentUI= fm.findFragmentById(R.id.container_ui_landscape);
+            fragmentList= fm.findFragmentById(R.id.container_list);
+            if ((fragmentUI == null) && (fragmentList == null)) {
+                Fragment fragmentUI= new UIFragment();
+                Fragment fragmentList= new ListFragment();
+                fm.beginTransaction()
+                        .add(R.id.container_ui_landscape, fragmentUI)
+                        .add(R.id.container_list, fragmentList)
+                        .commit();
+            }
+        } else {
+            //Orientation portrait
+            if (fragmentUI== null && fragmentList == null) {
+                fragmentUI= new UIFragment();
+                fragmentList = new ListFragment();
+                fm.beginTransaction()
+                        .add(R.id.container_ui, fragmentUI)
+                        .add(R.id.container_list,fragmentList)
+                        .commit();
+            }
         }
 
     }

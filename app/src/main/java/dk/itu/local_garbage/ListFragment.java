@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class ListFragment extends Fragment {
     ItemsViewModel itemsDB;
+    public ListFragment(){}
   //  private TextView listThings;
 
     @Override public void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class ListFragment extends Fragment {
         itemList.setAdapter(mAdapter);
         itemsDB.getValue().observe(getActivity(),itemsDB -> mAdapter.notifyDataSetChanged());
 
-        /*        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+/*                if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
             Button backButton = v.findViewById(R.id.back_button);
             backButton.setOnClickListener(view ->
                     getActivity()
@@ -40,13 +41,13 @@ public class ListFragment extends Fragment {
                             .beginTransaction()
                             .replace(R.id.back_button ,new UIFragment()).commit());
         }
-        */
+*/
 
         return v;
     }
 
     private class ItemHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private final TextView mWhatTextView, mNoView, mPlaceTextView;
+        private TextView mWhatTextView, mNoView, mPlaceTextView;
 
         public ItemHolder(View itemView) {
             super(itemView);
@@ -71,9 +72,9 @@ public class ListFragment extends Fragment {
 
     private class ItemAdapter extends RecyclerView.Adapter<ItemHolder>{
 
-        @NonNull
+
         @Override
-        public ItemHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
+        public ItemHolder onCreateViewHolder(ViewGroup parent, int viewType){
             LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
             View v = layoutInflater.inflate(R.layout.one_row, parent, false);
             return new ItemHolder(v);
