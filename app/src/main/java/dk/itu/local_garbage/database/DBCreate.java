@@ -20,11 +20,11 @@ public class DBCreate extends  SQLiteOpenHelper{
         );
 
         //For testing purposes add some items to the database
-        addItem(db,"coffee", "Irma");
-        addItem(db,"carrots", "Netto");
-        addItem(db,"milk", "Netto");
-        addItem(db,"bread", "bakery");
-        addItem(db,"butter", "Irma");
+        addItem(db,"coffee", "food waste");
+        addItem(db,"battery", "toxic waste");
+        addItem(db,"milk carton", "daily waste");
+        addItem(db,"newspaper", "paper");
+        addItem(db,"butter", "food waste");
     }
 
     private void addItem(SQLiteDatabase db, String what,  String place) {

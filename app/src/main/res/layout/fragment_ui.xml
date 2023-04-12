@@ -2,10 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#eddbbe"
     android:orientation="vertical"
-    android:background="#eddbbe">
+    android:padding="5dp">
 
-    <!--TextView for the heading -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,83 +15,91 @@
         android:textStyle="bold"
         android:textSize="25sp"
         android:textColor="@color/white"
+        android:layout_marginBottom="10dp"
         />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2.7"
-            android:text="What item"
-            android:textSize="15dp"/>
+            android:text="Item"
+            android:textColor="#235C41"
+            android:textSize="20sp"
+            android:layout_marginLeft="10sp"/>
 
         <EditText
             android:id="@+id/what_text"
-            android:background="#ffffff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:autofillHints=""
+            android:inputType="text"
+            android:layout_marginRight="10sp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2.7"
-            android:text="Where to place"
-            android:textSize="15dp"/>
+            android:text="Place"
+            android:textColor="#235C41"
+            android:textSize="20sp"
+            android:layout_marginLeft="10sp"/>
 
         <EditText
             android:id="@+id/place_text"
-            android:background="#ffffff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
-            android:layout_marginBottom="15dp"/>
+            android:background="#FFFFFF"
+            android:autofillHints=""
+            android:inputType="text"
+            android:layout_marginRight="10sp"/>
     </LinearLayout>
 
-    <!-- Where button -->
     <Button
         android:id="@+id/where_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5sp"
-        android:layout_marginLeft="10sp"
         android:layout_gravity="center"
-        android:background="#AD81E6F3"
-        android:text="Where"/>
+        android:layout_marginBottom="5dp"
+        android:background="#93c4ad"
+        android:text="where"
+        android:textSize="15sp" />
 
-
+    <!-- Button to add new item-->
     <Button
         android:id="@+id/add_item_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10sp"
-        android:layout_marginBottom="5sp"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="center"
-        android:background="#AD81E6F3"
-        android:text=" Add a new item "/>
+        android:layout_marginBottom="5dp"
+        android:background="#93c4ad"
+        android:text="add item"
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/delete_item_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10sp"
         android:layout_gravity="center"
-        android:background="#AD81E6F3"
-        android:text=" delete item "/>
+        android:background="#93c4ad"
+        android:text="delete item"
+        android:textSize="15sp" />
 
 </LinearLayout>

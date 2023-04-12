@@ -3,9 +3,10 @@ package dk.itu.local_garbage;
 public class Item {
     private String mWhat = null;
     private String mPlace = null;
-    public Item(String what, String place) { mWhat = what;  mPlace = place; }
+    public Item(String what, String place) {
+        mWhat = what;  mPlace = place; }
     @Override
-    public String toString() { return oneLine(""," in: "); }
+    public String toString() { return oneLine(""," should be placed in: "); }
     public String getWhat() { return mWhat; }
     public void setWhat(String what) { mWhat = what; }
     public String getPlace() { return mPlace; }

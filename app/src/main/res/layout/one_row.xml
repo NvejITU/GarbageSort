@@ -3,26 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:layout_marginBottom="5dp">
+    android:layout_marginBottom="5dp"
+    android:background="#eddbbe">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/item_no"
         android:layout_weight="1.5"
-        android:textSize="10dp"/>
+        android:textSize="12sp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/item_what"
         android:layout_weight="1"
-        android:textSize="10dp"/>
+        android:textSize="12sp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/item_where"
         android:layout_weight="1"
-        android:textSize="10dp"/>
+        android:textSize="12sp"/>
 </LinearLayout>

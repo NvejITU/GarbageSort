@@ -4,20 +4,23 @@
     android:layout_height="match_parent"
     android:background="#767272"
     android:orientation="horizontal"
-    android:paddingLeft="5dp">
+    android:paddingLeft="5dp"
+    android:baselineAligned="false">
+
 
     <FrameLayout
         android:id="@+id/container_ui_landscape"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        />
 
     <FrameLayout
-        android:id="@+id/container_list"
+        android:id="@+id/list_fragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:background="#6e4d50"
         android:textSize="15sp"
-        android:layout_weight="1.30
-        "/>
+        android:layout_weight="0.8"
+        />
 </LinearLayout>

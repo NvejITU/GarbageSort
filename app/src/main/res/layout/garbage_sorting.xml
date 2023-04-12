@@ -9,17 +9,11 @@
     <FrameLayout
         android:id="@+id/container_ui"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        />
+        android:layout_height="wrap_content"/>
 
     <FrameLayout
-        android:id="@+id/container_list"
+        android:id="@+id/list_fragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="#6e4d50"
-        android:textSize="15sp"
-        android:layout_weight="1"
-        />
-</LinearLayout>
+        android:layout_height="wrap_content"/>
 
+</LinearLayout>
