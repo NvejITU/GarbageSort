@@ -7,7 +7,7 @@ import dk.itu.local_garbage.database.ItemsDbSchema.ItemTable;
 
 public class DBCreate extends  SQLiteOpenHelper{
     private static final int VERSION = 1;
-    public static final String DATABASE_NAME = "shopping.db";
+    public static final String DATABASE_NAME = "garbage.db";
 
     public DBCreate(Context context) {
         super(context, DATABASE_NAME, null, VERSION);
@@ -28,7 +28,7 @@ public class DBCreate extends  SQLiteOpenHelper{
     }
 
     private void addItem(SQLiteDatabase db, String what,  String place) {
-        db.execSQL("INSERT INTO Items (what, placeC) VALUES ('$what', '$place')");
+        db.execSQL("INSERT INTO Items (what, placeC) VALUES ('" + what + "', '" + place + "')");
     }
 
     @Override
